@@ -14,12 +14,6 @@
 
 this is a new tag for 0.0.1 
 
-testBranch 修改第一次  first change
-
-		修改第二次，second change
-
-这是第三次修改   third change
-
 
 
 
@@ -43,3 +37,8 @@ this is 4
 this is 5
 
 this is 6
+
+sss
+sssss
+sssssss
+
