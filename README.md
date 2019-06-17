@@ -83,4 +83,3 @@ test the spectial  1
 
 test the spectial 2
 
-time now 6-17 15-10
