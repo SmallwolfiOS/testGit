@@ -27,6 +27,7 @@
         }
     }
 
+
     NSLog(@"这是我在公司的commit");
 
 
@@ -40,6 +41,9 @@
     [self switchToInteger:@"123.456"];
     [self switchToInteger:@"123"];
     [self switchToInteger:@"123汉字"];
+
+    NSLog(@"这是我在公司的commit");
+
     
 }
 
