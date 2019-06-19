@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+
     for(NSString *familyName in [UIFont familyNames]){
         NSLog(@"Font FamilyName = %@\n\n",familyName); //*输出字体族科名字
         
@@ -26,7 +27,24 @@
         }
     }
     NSLog(@"这是我在公司的commit");
+
     
+    
+    
+    [self switchToInteger:@"123ABC"];
+    [self switchToInteger:@"ABC"];
+    [self switchToInteger:@"ABC123"];
+    [self switchToInteger:@"123ABC456"];
+    [self switchToInteger:@"123.456"];
+    [self switchToInteger:@"123"];
+    [self switchToInteger:@"123汉字"];
+    
+}
+
+- (NSInteger)switchToInteger:(NSString *)str{
+    NSInteger i = [str integerValue];
+    NSLog(@"%@    ==============>%lu",str,i);
+    return i;
 }
 /**
  *  点击旋转按钮
