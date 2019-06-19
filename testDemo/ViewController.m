@@ -18,21 +18,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    for(NSString *familyName in [UIFont familyNames]){
-        NSLog(@"Font FamilyName = %@\n\n",familyName); //*输出字体族科名字
-        
-        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
-            NSLog(@"t%@",fontName);         //*输出字体族科下字样名字
-        }
-    }
-
-
-    NSLog(@"这是我在这里做的更改");//为了就是和本地的stash做冲突
-    //这里是我在stash时候编辑的
-
-    NSLog(@"这是我在家里面的提交");
-
+//    for(NSString *familyName in [UIFont familyNames]){
+//        NSLog(@"Font FamilyName = %@\n\n",familyName); //*输出字体族科名字
+//
+//        for(NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+//            NSLog(@"t%@",fontName);         //*输出字体族科下字样名字
+//        }
+//    }
+//
+//
+//    NSLog(@"这是我在这里做的更改");//为了就是和本地的stash做冲突
+//    //这里是我在stash时候编辑的
+//
+//    NSLog(@"这是我在家里面的提交");
     
+    
+    
+    [self switchToInteger:@"123ABC"];
+    [self switchToInteger:@"ABC"];
+    [self switchToInteger:@"ABC123"];
+    [self switchToInteger:@"123ABC456"];
+    [self switchToInteger:@"123.456"];
+    [self switchToInteger:@"123"];
+    [self switchToInteger:@"123汉字"];
+    
+}
+
+- (NSInteger)switchToInteger:(NSString *)str{
+    NSInteger i = [str integerValue];
+    NSLog(@"%@    ==============>%lu",str,i);
+    return i;
 }
 /**
  *  点击旋转按钮
