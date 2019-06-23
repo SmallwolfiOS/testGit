@@ -27,6 +27,7 @@
         }
     }
     NSLog(@"这是我在公司的commit");
+
     
     [self switchToInteger:@"123ABC"];
     [self switchToInteger:@"ABC"];
