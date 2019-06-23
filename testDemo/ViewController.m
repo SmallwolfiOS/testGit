@@ -27,13 +27,9 @@
         }
     }
     NSLog(@"这是我在公司的commit");
-<<<<<<< HEAD
 
     NSLog(@"111");
 
-    
-=======
->>>>>>> commit in company
     
     [self switchToInteger:@"123ABC"];
     [self switchToInteger:@"ABC"];
