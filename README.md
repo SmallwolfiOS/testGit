@@ -85,3 +85,5 @@ test the spectial  1
 test the spectial 2
  to test rebase for commit message push
  to test rebase for commit message push22
+ 
+add by master
