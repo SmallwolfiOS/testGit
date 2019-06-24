@@ -86,6 +86,7 @@ test the spectial 2
  to test rebase for commit message push
  to test rebase for commit message push22
  
+
 add by master
 
 
@@ -96,4 +97,7 @@ to test rebase - i
 
 add by me
 
+
+ 
+add by dev
 
