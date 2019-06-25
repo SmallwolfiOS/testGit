@@ -87,3 +87,7 @@ test the spectial 2
  to test rebase for commit message push22
  
 add by master
+
+
+commit in home to test 'git pull --rebase'
+
