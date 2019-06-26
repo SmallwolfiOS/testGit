@@ -90,4 +90,10 @@ add by master
 
 
 commit in home to test 'git pull --rebase'
+add in company to test "git pull --rebase"
+
+to test rebase - i
+
+add by me
+
 
