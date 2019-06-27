@@ -89,3 +89,6 @@ test the spectial 2
  
  
 add by dev
+
+
+git commit --amend
