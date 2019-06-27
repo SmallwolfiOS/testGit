@@ -101,3 +101,7 @@ add by me
  
 add by dev
 
+
+
+git commit --amend
+
