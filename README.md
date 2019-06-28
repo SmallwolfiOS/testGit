@@ -1,4 +1,5 @@
-# testGit包括屏幕旋转的方案和打印出所有的字体库
+#
+testGit包括屏幕旋转的方案和打印出所有的字体库
 
 
 ###### 居然支持markdown 01
@@ -92,3 +93,15 @@ add by dev
 
 
 git commit --amend
+
+
+
+如果要修改本地的commit 直接使用git rebase -i
+或者git rebase -i HEAD～3
+
+或者直接使用 git commit --amend
+
+
+
+
+
