@@ -7,8 +7,16 @@
 //
 
 #import "ViewController.h"
+#import <Masonry.h>
+#import "leftViewController.h"
+#import "rightViewController.h"
 
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 @interface ViewController ()
+@property (nonatomic,strong)UIScrollView * scrollView;
+@property (nonatomic,strong)leftViewController * leftVC;
+@property (nonatomic,strong)rightViewController * rightVC;
 
 @end
 
@@ -18,7 +26,75 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+    [self.view addSubview:self.scrollView];
+    [self setupSub];
+    [self layoutSubviewSnapKit];
+    
+    
+}
+- (UIScrollView *)scrollView{
+    if (!_scrollView) {
+        _scrollView = [[UIScrollView alloc]init];
+        _scrollView.backgroundColor = [UIColor purpleColor];
+        _scrollView.pagingEnabled = YES;
+        _scrollView.showsVerticalScrollIndicator = NO;
+//        _scrollView.directionalLockEnabled = YES;
+        _scrollView.bounces = NO;
+    }
+    return _scrollView;
+}
+- (void)setupSub{
+    self.leftVC = [[leftViewController alloc]init];
+    self.rightVC = [[rightViewController alloc]init];
+    
+    [self addChildViewController:self.leftVC];
+    [self addChildViewController:self.rightVC];
+    
+    [self.scrollView addSubview:self.leftVC.view];
+    [self.scrollView addSubview:self.rightVC.view];
+}
+- (void)layoutSubviewSnapKit{
+//    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(self.view);
+//        make.right.mas_equalTo(self.view);
+//    }];
+    [self.leftVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view).mas_offset(100);
+         make.bottom.mas_equalTo(self.view).mas_offset(-100);
+        make.width.mas_equalTo(kScreenWidth);
+        make.left.mas_equalTo(self.scrollView);
+    }];
+    [self.rightVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.bottom.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view).mas_offset(100);
+        make.bottom.mas_equalTo(self.view).mas_offset(-100);
+        make.width.mas_equalTo(kScreenWidth);
+        make.left.mas_equalTo(self.leftVC.view.mas_right);
+    }];
+    [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view).mas_offset(84);
+        make.right.mas_equalTo(self.rightVC.view);
+    }];
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- (void)funtionforViewdid{
     for(NSString *familyName in [UIFont familyNames]){
         NSLog(@"Font FamilyName = %@\n\n",familyName); //*输出字体族科名字
         
@@ -26,11 +102,11 @@
             NSLog(@"t%@",fontName);         //*输出字体族科下字样名字
         }
     }
-
-
+    
+    
     NSLog(@"这是我在公司的commit");
-
-
+    
+    
     [self switchToInteger:@"123ABC"];
     [self switchToInteger:@"ABC"];
     [self switchToInteger:@"ABC123"];
@@ -38,15 +114,13 @@
     [self switchToInteger:@"123.456"];
     [self switchToInteger:@"123"];
     [self switchToInteger:@"123汉字"];
-
+    
     NSLog(@"这是我在公司的commit");
-
-
+    
+    
     NSLog(@"111");
 
-    
 }
-
 - (NSInteger)switchToInteger:(NSString *)str{
     NSInteger i = [str integerValue];
     NSLog(@"%@    ==============>%lu",str,i);
