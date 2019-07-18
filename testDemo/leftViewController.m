@@ -18,13 +18,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor greenColor];
-    UIView * view = [[UIView alloc]init];
-    view.backgroundColor = [UIColor blackColor];
-    [self.view addSubview:view];
-    [view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.bottom.mas_equalTo(self.view);
-        make.size.mas_equalTo(CGSizeMake(100, 100));
-    }];
+//    UIView * view = [[UIView alloc]init];
+//    view.backgroundColor = [UIColor blackColor];
+//    [self.view addSubview:view];
+//    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.bottom.mas_equalTo(self.view);
+//        make.size.mas_equalTo(CGSizeMake(100, 100));
+//    }];
 }
 
 /*

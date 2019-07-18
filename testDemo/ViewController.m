@@ -55,26 +55,18 @@
     [self.scrollView addSubview:self.rightVC.view];
 }
 - (void)layoutSubviewSnapKit{
-//    [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.edges.mas_equalTo(self.view);
-//        make.right.mas_equalTo(self.view);
-//    }];
     [self.leftVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.view).mas_offset(100);
-         make.bottom.mas_equalTo(self.view).mas_offset(-100);
+        make.top.bottom.mas_equalTo(self.view);
         make.width.mas_equalTo(kScreenWidth);
         make.left.mas_equalTo(self.scrollView);
     }];
     [self.rightVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.bottom.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view).mas_offset(100);
-        make.bottom.mas_equalTo(self.view).mas_offset(-100);
+        make.top.bottom.mas_equalTo(self.view);
         make.width.mas_equalTo(kScreenWidth);
         make.left.mas_equalTo(self.leftVC.view.mas_right);
     }];
     [self.scrollView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
-        make.top.mas_equalTo(self.view).mas_offset(84);
         make.right.mas_equalTo(self.rightVC.view);
     }];
 }
