@@ -34,25 +34,27 @@
     if (!_mainLabel) {
         _mainLabel = [[UILabel alloc]init];
         _mainLabel.font = [UIFont systemFontOfSize:15];
-        _mainLabel.numberOfLines = 10;
+        _mainLabel.numberOfLines = 0;
+        
+       _mainLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width;
     }
     return _mainLabel;
 }
 - (void)layoutSubviewSnapKit{
     [self.imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self).mas_offset(10);
-        make.centerX.mas_equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(80, 60));
+        make.top.equalTo(self.contentView).mas_offset(10);
+        make.left.right.equalTo(self);
+        make.height.mas_equalTo(60);
     }];
-//    [_mainLabel setContentHuggingPriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
-//    [_mainLabel setContentCompressionResistancePriority:UILayoutPriorityDefaultLow forAxis:UILayoutConstraintAxisHorizontal];
+
     [self.mainLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(self);
-        make.top.mas_equalTo(self.imgView.mas_bottom).mas_offset(15);
-        make.bottom.mas_equalTo(self);
-        make.height.mas_equalTo(100);
+        make.left.right.equalTo(self.contentView);
+        make.top.equalTo(self.imgView.mas_bottom).mas_offset(15);
+        make.bottom.equalTo(self.contentView);
+
     }];
-//    [self layoutIfNeeded];
+    [_mainLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+    [self layoutIfNeeded];
 }
 - (void)setString:(NSString *)str{
     self.mainLabel.text = str;

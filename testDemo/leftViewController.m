@@ -70,4 +70,8 @@
     [cell setString:self.dataSource[indexPath.row]];
     return cell;
 }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 只用返回这个！
+    return UITableViewAutomaticDimension;
+}
 @end
