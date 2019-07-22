@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1898A5C222E5B792004B9266 /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1898A5C122E5B792004B9266 /* LeftTableViewCell.m */; };
 		967723051CE9B83A00027B70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 967723041CE9B83A00027B70 /* main.m */; };
 		967723081CE9B83A00027B70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 967723071CE9B83A00027B70 /* AppDelegate.m */; };
 		9677230B1CE9B83A00027B70 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9677230A1CE9B83A00027B70 /* ViewController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1898A5C022E5B792004B9266 /* LeftTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
+		1898A5C122E5B792004B9266 /* LeftTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
 		6E12B6C008690C8E8AB7C107 /* libPods-testDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		967723001CE9B83900027B70 /* testDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967723041CE9B83A00027B70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				9677230A1CE9B83A00027B70 /* ViewController.m */,
 				E2D33EAD22DF642F006C29F5 /* leftViewController.h */,
 				E2D33EAE22DF642F006C29F5 /* leftViewController.m */,
+				1898A5C022E5B792004B9266 /* LeftTableViewCell.h */,
+				1898A5C122E5B792004B9266 /* LeftTableViewCell.m */,
 				E2D33EB022DF643E006C29F5 /* rightViewController.h */,
 				E2D33EB122DF643E006C29F5 /* rightViewController.m */,
 				9677230C1CE9B83A00027B70 /* Main.storyboard */,
@@ -212,6 +217,7 @@
 			files = (
 				9677230B1CE9B83A00027B70 /* ViewController.m in Sources */,
 				E2D33EAF22DF642F006C29F5 /* leftViewController.m in Sources */,
+				1898A5C222E5B792004B9266 /* LeftTableViewCell.m in Sources */,
 				E2D33EB222DF643E006C29F5 /* rightViewController.m in Sources */,
 				967723081CE9B83A00027B70 /* AppDelegate.m in Sources */,
 				967723051CE9B83A00027B70 /* main.m in Sources */,
